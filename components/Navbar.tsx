@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
-import{FaDisease } from 'react-icons/fa'
+import { FaDisease } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -15,7 +15,7 @@ export default function Navbar() {
               </p>
             </div>
             <div className="items-center relative hidden lg:flex space-x-3">
-              <Link href={"https://github.com/UnusualAbsurd/covid19-country"}>
+              <Link href={"https://github.com/jadennns/covid19-country"}>
                 <button className="flex items-center space-x-1 bg-gray-800 hover:bg-gray-900 text-white rounded-md px-3 py-2">
                   <AiFillGithub size={25} />
                   <p className="font-semibold">Github</p>
