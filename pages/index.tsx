@@ -6,13 +6,25 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const rounded = (num: number) => {
-  if (num > 1000000000) {
-    return Math.round(num / 100000000) / 10 + "Bn";
-  } else if (num > 1000000) {
-    return Math.round(num / 100000) / 10 + "M";
-  } else {
-    return Math.round(num / 100) / 10 + "K";
-  }
+  const symbols = [
+    { value: 1, symbol: "" },
+    { value: 1e3, symbol: "k" },
+    { value: 1e6, symbol: "M" },
+    { value: 1e9, symbol: "B" },
+    { value: 1e12, symbol: "T" },
+    { value: 1e15, symbol: "Q" },
+    { value: 1e18, symbol: "QT" },
+  ];
+  const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+  var find = symbols
+    .slice()
+    .reverse()
+    .find(function (item) {
+      return num >= item.value;
+    });
+  return find
+    ? (num / find.value).toFixed(2).replace(rx, "$1") + find.symbol
+    : "0";
 };
 
 export default function Main() {
