@@ -13,6 +13,32 @@ function MyApp({ Component, pageProps }: AppProps) {
             href: "cv-d.png",
           },
         ]}
+        additionalMetaTags={[
+          {
+            property: "og:title",
+            content: `Covid-19 Country Stats`,
+          },
+          {
+            property: "og:type",
+            content: "website",
+          },
+          {
+            property: `og:url`,
+            content: `https://jadenns-covid19-country.netlify.app/`,
+          },
+          {
+            property: "og:image",
+            content: "/cv-d.png",
+          },
+          {
+            property: "og:description",
+            content: `In this website, you can hover over the country on the map and check the country covid-19 statistics.`,
+          },
+          {
+            name: "theme-color",
+            content: "#ffffff",
+          },
+        ]}
       />
       <Component {...pageProps} />
     </>
