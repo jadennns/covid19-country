@@ -32,11 +32,11 @@ function Map({ setTooltip }: Props) {
                     outline: "none",
                   },
                   hover: {
-                    fill: "#F53",
+                    fill: "rgb(225 29 72)",
                     outline: "none",
                   },
                   pressed: {
-                    fill: "#E42",
+                    fill: "rgb(225 29 72)",
                     outline: "none",
                   },
                 }}
